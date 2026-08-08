@@ -1,8 +1,8 @@
 const menuItems = document.querySelectorAll(".menu-item")
 
-menuItems.forEach((currentItem)=>{
-    currentItem.addEventListener("click", ()=>{
-        menuItems.forEach(anyItem =>{
+menuItems.forEach((currentItem) => {
+    currentItem.addEventListener("click", () => {
+        menuItems.forEach(anyItem => {
             anyItem.classList.remove("active");
         });
         currentItem.classList.add("active");
@@ -20,124 +20,112 @@ socialIcons.forEach((currentIcon) => {
     });
 })
 
+
+//Social Media Buttons
 const gitHub = document.querySelector(".bi-github");
-gitHub.addEventListener("click", () => {
-    window.open("https://github.com/Varun-Katam", "_blank")
-})
-
 const linkedIn = document.querySelector(".bi-linkedin");
-linkedIn.addEventListener("click", () => {
-    window.open("https://www.linkedin.com/in/varun-katam-3a6951425/", "_blank");
-})
-
 const twitter = document.querySelector(".bi-twitter");
-twitter.addEventListener("click", () => {
-    window.open("https://x.com/abhi_varun3327", "_blank");
-})
-
 const insta = document.querySelector(".bi-instagram");
-insta.addEventListener("click", () => {
-    window.open("https://www.instagram.com/varun_katam/", "_blank");
-})
+//Social Media Account Links
+const gitAcc = "https://github.com/Varun-Katam";
+const linkedInAcc = "https://www.linkedin.com/in/varun-katam-3a6951425/";
+const twitterAcc = "https://x.com/abhi_varun3327";
+const instaAcc = "https://www.instagram.com/varun_katam/";
 
-const about = document.querySelector(".about");
-about.addEventListener("click", ()=>{
-    document.querySelector(".view-projects").scrollIntoView({
-        behaviour: "smooth"
-    });
-    const aboutMe = document.querySelector(".about-me");
-    aboutMe.style.boxShadow = "0 0 2px #1a55ece9, 0 0 6px #008cff, 0 0 10px #00d5ff";
-    setTimeout(()=>{
-        aboutMe.style.boxShadow = "none";
-    }, 1000);
-})
+const socialMedia = [gitHub, linkedIn, twitter, insta];
+const socialMediaLinks = [gitAcc, linkedInAcc, twitterAcc, instaAcc];
 
-
-const home = document.querySelector(".home");
-home.addEventListener("click", ()=>{
-    window.scrollTo({
-        top: 0,
-        behaviour: "smooth"
+socialMedia.forEach((currentMedia, i)=>{
+    currentMedia.addEventListener("click", ()=>{
+        window.open(socialMediaLinks[i]);
     });
 })
 
-const skills = document.querySelector(".skills");
-skills.addEventListener("click", ()=>{
-    document.querySelector(".view-projects").scrollIntoView({
-        behaviour: "smooth"
-    });
-    const skillsCard =  document.querySelector(".skills-card");
-    skillsCard.style.boxShadow = "0 0 2px #1a55ece9, 0 0 6px #008cff, 0 0 10px #00d5ff";
-    setTimeout(()=>{
-        skillsCard.style.boxShadow = "none";
-    }, 1000);
-})
-
+//Scroll to project section
 const proj = document.querySelector(".proj");
 const pros = document.querySelector(".view-projects");
 const projects = [pros, proj];
-proj.addEventListener("click", ()=>{
+proj.addEventListener("click", () => {
     document.querySelector(".pro-lang").scrollIntoView({
-        behaviour: "smooth"
+        behavior: "smooth"
     });
     const bloodApp = document.querySelector(".blood-app");
     const learnifyApp = document.querySelector(".my-learnify");
     const portfolioApp = document.querySelector(".my-portfolio");
-    
+
     const cards = [bloodApp, learnifyApp, portfolioApp];
-    cards.forEach((currentCard)=>{
+    cards.forEach((currentCard) => {
         currentCard.style.boxShadow = "0 0 2px #1a55ece9, 0 0 6px #008cff, 0 0 10px #00d5ff";
-        setTimeout(()=>{
+        setTimeout(() => {
             currentCard.style.boxShadow = "none";
         }, 1000);
     })
 })
 
+// Scroll To View Function
+// const home = document.querySelector(".home");
+
+const about = document.querySelector(".about");
+const skills = document.querySelector(".skills");
 const education = document.querySelector(".education");
-education.addEventListener("click", ()=>{
-    document.querySelector(".edu").scrollIntoView({
-        behaviour: "smooth"
+const contact = document.querySelector(".my-contact");
+
+const aboutMe = document.querySelector(".about-me");
+const skillsCard = document.querySelector(".skills-card");
+const eduCard = document.querySelector(".edu");
+const contactCard = document.querySelector(".contact-me");
+
+const menus = [about, skills, education, contact];
+const cards = [aboutMe, skillsCard, eduCard, contactCard];
+
+menus.forEach((currentMenu, i) => {
+    currentMenu.addEventListener("click", () => {
+        if (i == 0 || i == 1) {
+            const view = document.querySelector(".view-projects");
+            view.scrollIntoView({
+                behavior: "smooth"
+            })
+        } else {
+            cards[i].scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+        cards[i].style.boxShadow = "0 0 2px #1a55ece9, 0 0 6px #008cff, 0 0 10px #00d5ff";
+        setTimeout(() => {
+            cards[i].style.boxShadow = "none";
+        }, 1000);
     });
-    document.querySelector(".edu").style.boxShadow = "0 0 2px #1a55ece9, 0 0 6px #008cff, 0 0 10px #00d5ff";
-    setTimeout(()=>{
-        document.querySelector(".edu").style.boxShadow = "none";
-    }, 1000);
+
 })
 
-const contact = document.querySelector(".my-contact");
-contact.addEventListener("click", ()=>{
-    document.querySelector(".contact-me").scrollIntoView({
-        behaviour: "smooth"
-    });
-    document.querySelector(".contact-me").style.boxShadow = "0 0 2px #1a55ece9, 0 0 6px #008cff, 0 0 10px #00d5ff";
-    setTimeout(()=>{
-        document.querySelector(".contact-me").style.boxShadow = "none";
-    }, 1000);
-})
 
 const nav = document.querySelector(".top");
-nav.addEventListener("click", ()=>{
-    window.scrollTo({
-        top: 0,
-        behaviour: "smooth"
+const home = document.querySelector(".home");
+const homePage = [nav, home];
+homePage.forEach((currentMenu)=>{
+    currentMenu.addEventListener("click", ()=>{
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 })
 
 const myProjects = document.querySelector(".view-projects");
-myProjects.addEventListener("click", ()=>{
+myProjects.addEventListener("click", () => {
     document.querySelector(".pro-lang").scrollIntoView({
         behavior: "smooth"
     });
 })
 
 const contactMe = document.querySelector(".contact");
-contactMe.addEventListener("click", ()=>{
+contactMe.addEventListener("click", () => {
     document.querySelector(".contact-me").scrollIntoView({
         behavior: "smooth"
     });
 })
 
 const download = document.querySelector(".download");
-download.addEventListener("click", ()=>{
+download.addEventListener("click", () => {
     window.print();
 })
