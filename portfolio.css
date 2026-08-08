@@ -67,7 +67,7 @@ nav{
     content: "";
     position: absolute;
     left: 0;
-    top: 30px;   /* Adjust this value */
+    bottom: -14px;   /* Adjust this value */
     width: 100%;
     height: 2.5px;
     background: rgba(26, 85, 236, 0.913);
@@ -330,10 +330,8 @@ a{
     display: flex;
     gap: 20px;
 }
-.edu{
+.educate{
     width: fit-content;
-    /* padding-right: 80px;
-    padding-bottom: 40px; */
 }
 .dot{
     display: inline-block;
@@ -419,14 +417,18 @@ footer{
     cursor: pointer;
     bottom: 20px;
 }
+.top:hover{
+    box-shadow: 0 0 2px #1a55ece9, 0 0 6px #008cff, 0 0 10px #00d5ff;
+}
 .intro{
     display: flex;
     /* justify-content: space-between; */
     gap: 60px;
     align-items: center;
 }
-/* @media print {
-    .profile{
-        position: static;
-    }
+.edu{
+    width: auto;
+}
+/* .my-learnify {
+    border: 3px solid red;
 } */
