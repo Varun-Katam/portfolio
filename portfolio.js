@@ -9,6 +9,8 @@ menuItems.forEach((currentItem) => {
     });
 })
 
+
+
 const socialIcons = document.querySelectorAll(".social")
 
 socialIcons.forEach((currentIcon) => {

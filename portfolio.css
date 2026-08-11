@@ -6,6 +6,10 @@
 html {
     scroll-behavior: smooth;
 }
+:root{
+    --blue-color: #1a55ece9;
+    --semi-blue: rgba(26, 85, 236, 0.913);
+}
 body{
     /* background-color:aliceblue; */
     background-image: url("bg_img.png");
@@ -21,7 +25,7 @@ nav{
     justify-content: space-between;
 }
 .blue{
-    color:rgba(26, 85, 236, 0.913);
+    color: var(--semi-blue);
 }
 .nav-bar{
     height: 45px;
@@ -45,23 +49,20 @@ nav{
     font-weight: bold;
 }
 .lname{
-    color: rgba(26, 85, 236, 0.913);
+    color: var(--semi-blue);
 }
 .menu{
     display: flex;
     justify-content: space-around;
     gap: 60px;
-    /* margin-left: 150px; */
-    /* flex: 1; */
 }
 .menu-item{
     cursor: pointer;
     position: relative;
 }
 .active{
-    color:rgba(26, 85, 236, 0.913);
+    color: var(--semi-blue);
     font-weight: bold;
-    /* border-bottom: 2px solid rgba(26, 85, 236, 0.913); */
 }
 .menu-item.active::after {
     content: "";
@@ -70,13 +71,13 @@ nav{
     bottom: -14px;   /* Adjust this value */
     width: 100%;
     height: 2.5px;
-    background: rgba(26, 85, 236, 0.913);
+    background: var(--semi-blue);
     border-radius: 3px;
 }
 .download{
     margin-right: 15px;
     padding: 5px;
-    background-color:rgba(26, 85, 236, 0.913);
+    background-color: var(--semi-blue);
     border: none;
     color: white;
     border-radius: 3px;
@@ -91,7 +92,6 @@ nav{
     font-size: 22px;
 }
 .cname{
-    /* padding-left: 122px; */
     font-size: 40px;
 }
 .sub-content{
@@ -117,7 +117,7 @@ nav{
 .contact{
     border: none;
     border: 1.5px solid #1a55ece9;
-    color:rgba(26, 85, 236, 0.913);
+    color: var(--semi-blue);
     background-color: white;
     font-weight: bold;
 }
@@ -139,7 +139,7 @@ nav{
     color:grey;
 }
 .bi-linkedin.active{
-    color: #0A66C2;
+    color: rgb(10, 102, 194);
 }
 .bi-linkedin:hover{
     filter: drop-shadow(0 0 1px rgb(120, 182, 236)) drop-shadow(0 0 2px rgb(32, 121, 216)) drop-shadow(0 0 3px #0A66C2);
@@ -180,9 +180,6 @@ button{
     /* box-shadow: 0 0 5px #1a55ece9, 0 0 15px #008cff, 0 0 30px #00d5ff; */
     background-size: cover;
     background-position: center;
-    /* position: absolute;
-    left: 600px;
-    bottom: 240px; */
 }
 .projects:hover{
     box-shadow: 0 0 2px #1a55ece9, 0 0 6px #008cff, 0 0 10px #00d5ff;
@@ -207,7 +204,6 @@ button{
 }
 .bi-person{
     font-size: 25px;
-    /* padding: 4px; */
     color: rgb(13, 111, 197);
 }
 .text-icon{
@@ -217,7 +213,7 @@ button{
 }
 .text{
     font-weight: bold;
-    border-bottom: 2px solid rgba(26, 85, 236, 0.913);
+    border-bottom: 2px solid var(--semi-blue);
     padding-bottom: 5px;
     font-size: 17px;
 }
@@ -286,7 +282,7 @@ button{
 }
 a{
     text-decoration: none;
-    color: rgba(26, 85, 236, 0.913);
+    color: var(--semi-blue);
     display: block;
     padding-bottom: 10px;
     margin-top: 10px;
@@ -301,7 +297,6 @@ a{
 }
 .learnify{
     padding-bottom: 10px;
-    /* position: absolute; */
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -426,6 +421,3 @@ footer{
 .edu{
     width: auto;
 }
-/* .my-learnify {
-    border: 3px solid red;
-} */
