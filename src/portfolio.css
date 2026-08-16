@@ -184,6 +184,9 @@ button{
 .projects:hover{
     box-shadow: 0 0 2px #1a55ece9, 0 0 6px #008cff, 0 0 10px #00d5ff;
 }
+.about-me{
+    scroll-margin-top: 80px;
+}
 .card{
     height: auto;
     width: 281px;
@@ -244,6 +247,7 @@ button{
 }
 .skills-card{
     width: 600px;
+    scroll-margin-top: 80px;
 }
 .pro-lang{
     display: flex;
@@ -270,6 +274,7 @@ button{
     display: flex;
     gap: 20px;
     margin-top: 8px;
+    scroll-margin-top: 80px;
 }
 .blood{
     width: 40px;
@@ -368,6 +373,7 @@ a{
 .your{
     padding: 8px;
     font-family: sans-serif;
+    margin: 0 4px;
 }
 .ip{
     height: 30px;
