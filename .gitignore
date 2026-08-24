@@ -1,4 +1,13 @@
-node_modules/
-dist/
-.env
-desktop.ini
+include<stdio.h>
+main()
+{
+int a=15;
+int b=10;
+int c;
+printf("addition of two numbers\n");
+printf("a:%d,a\n");
+printf("b:%d,b\n");
+c=15+10;
+printf("c:%d,c\n");
+}
+
