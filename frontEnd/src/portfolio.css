@@ -12,7 +12,7 @@ html {
 }
 body{
     /* background-color:aliceblue; */
-    background-image: url("/bg_img.png");
+    background-image: url("/portfolio//bg_img.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -176,7 +176,7 @@ button{
     height: 250px;
     border-radius: 50%;
     border: 2px solid rgb(207, 201, 201);
-    background-image: url("/profile.jpg");
+    background-image: url("/portfolio//profile.jpg");
     /* box-shadow: 0 0 5px #1a55ece9, 0 0 15px #008cff, 0 0 30px #00d5ff; */
     background-size: cover;
     background-position: center;
