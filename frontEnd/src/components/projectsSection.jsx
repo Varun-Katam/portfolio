@@ -1,3 +1,5 @@
+
+
 export default function ProjectsSection({proSecRef, secRef}) {
     return (
         <div ref={secRef}>
@@ -22,7 +24,7 @@ export default function ProjectsSection({proSecRef, secRef}) {
                 </div>
 
                 <div className="blood-app card my-learnify">
-                    <img src="learnify.png" className="blood logo" />
+                    <img src="/portfolio/learnify.png" className="blood logo" />
                         <span className="blood-app lang learnify-app">Learnify App</span>
                         <p className="project-content my-content">A platform for BTech students to access study resources and
                             materials.</p>
