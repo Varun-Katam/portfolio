@@ -427,3 +427,8 @@ footer{
 .edu{
     width: auto;
 }
+@media print {
+    .nav-bar {
+        position: static !important;
+    }
+}

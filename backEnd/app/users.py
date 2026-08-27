@@ -19,10 +19,30 @@ def send_message(user: UserSchema, db: Session):
 
         return new_user
 
-    except IntegrityError:
+    except IntegrityError as e:
         db.rollback()
+
+        error = str(e)
+
+        if "check_name" in error:
+            raise HTTPException(
+                status_code=400,
+                detail="Name must contain at least 3 characters!"
+            )
+
+        if "check_email" in error:
+            raise HTTPException(
+                status_code=400,
+                detail = "Email should not be empty!"
+            )
+
+        if "check_message" in error:
+                    raise HTTPException(
+                        status_code=400,
+                        detail = "Please enter your message"
+                    )
 
         raise HTTPException(
             status_code=400,
-            detail="This email has already been used."
+            detail="Invalid data. Please check your input."
         )

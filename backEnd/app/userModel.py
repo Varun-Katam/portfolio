@@ -7,9 +7,11 @@ class UserModel(Base):
     __tablename__ = "userData"
     id = Column(Integer, primary_key=True)
     name = Column(String(30), nullable=False)
-    email = Column(String(30), unique=True)
+    email = Column(String(30), nullable=False)
     message = Column(Text, nullable=False)
 
     __table_args__ = (
         CheckConstraint("length(name)>2", name="check_name"),
+        CheckConstraint("length(email)>0", name="check_email"),
+        CheckConstraint("length(message)>0", name="check_message"),
     )

@@ -27,7 +27,14 @@ export default function Contact({ secRef }) {
 
             if (!response.ok) {
                 console.log(result);
-                alert(result.detail);
+
+                if (Array.isArray(result.detail)) {
+                    const messages = result.detail.map(error => error.msg);
+                    alert(messages.join("\n"));
+                } else {
+                    alert(result.detail);
+                }
+
                 return;
             }
 
