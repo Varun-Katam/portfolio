@@ -5,6 +5,7 @@ export default function Contact({ secRef }) {
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
     const [userMessage, setUserMessage] = useState("");
+    const [sendMessage, setSendMessage] = useState(false)
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -13,6 +14,8 @@ export default function Contact({ secRef }) {
             email: userEmail,
             message: userMessage
         };
+        setSendMessage(true);
+
 
         try {
             const response = await fetch("https://portfolio-backend-ia6p.onrender.com/contact", {
@@ -50,6 +53,9 @@ export default function Contact({ secRef }) {
             console.error(error);
             alert("Unable to connect to server");
         }
+        finally{
+            setSendMessage(false);
+        }
     };
     return (
         <div className="contact-me card educate" ref={secRef}>
@@ -67,7 +73,7 @@ export default function Contact({ secRef }) {
                     <input type="text" placeholder="Your Name" className="your ip" value={userName} onChange={(e) => setUserName(e.target.value)} />
                     <input type="email" placeholder="Your Email" className="your ip" value={userEmail} onChange={(e) => setUserEmail(e.target.value)} /><br /><br />
                     <textarea rows="3" cols="51" className="your" placeholder="Your Message" value={userMessage} onChange={(e) => setUserMessage(e.target.value)}></textarea><br />
-                    <button className="msg-btn download">Send Message
+                    <button className="msg-btn download" disabled={sendMessage}>{sendMessage ? "Sending..." : "Send Message"}
                         <div className="tele"><i className="bi bi-telegram share"></i></div>
                     </button>
                 </form>
